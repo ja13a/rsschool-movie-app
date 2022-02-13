@@ -1,16 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./fonts.css">
   <link rel="icon" href="./assets/img/svg/clapperboard-solid.svg">
-  <title>Movie App</title>
+  <title>Croakofilms</title>
 </head>
 <body>
+  <header>
+    <div class="search">
+      <form id="search-form" onsubmit="event.preventDefault();">
+        <input id="search-input" type="search" autocomplete="off" placeholder="Поиск...">
+        <button id="clear-search-button" type="reset"></button>
+      </form>
+    </div>
+  </header>
   <div id="root">
-    
+
   </div>
+  <footer>
+    <span>2021</span>
+    <a href="https://github.com/ja13a/rsschool-movie-app" class="gh-logo"><img src="./assets/img/png/GitHub-Mark-Light-32px.png"></a>
+    <a href="https://rs.school/js-stage0/" class="rsschool-logo"><img src="./assets/img/svg/rs_school_js.svg"></a>
+  </footer>
   <script src="./index.js"></script>
 </body>
+
+<template id="film-template">
+  <div class="film-wrapper">
+    <img id="film-poster" class="film-poster" src="" alt=""/>
+    <div id="film-info-wrapper" class="film-info-wrapper">
+      <button class="film-show-description-button" id="film-show-description-button" title="Показать описание"></button>
+      <div class="film-name-wrapper">
+        <span id="film-original-name" class="film-original-name"></span>
+        <span id="film-name" class="film-name"></span>
+      </div>
+      <div id="film-genres" class="film-genres"></div>
+      <div id="film-badges" class="film-badges">
+        <span id="film-rating" class="film-rating film-badge">
+          <span class="film-badge-icon film-badge-star-icon"></span>
+        </span>
+        <span id="film-release-date" class="film-release-date film-badge">
+          <span class="film-badge-icon film-badge-date-icon"></span>
+        </span>
+        <span id="film-popularity" class="film-popularity film-badge">
+          <span class="film-badge-icon film-badge-popularity-icon"></span>
+        </span>
+        <span id="film-original-language" class="film-original-language film-badge">
+          <span class="film-badge-icon film-badge-original-language-icon"></span>
+        </span>
+      </div>
+    </div>
+    <div class="film-description" id="film-description">
+      <h2>Обзор</h2>
+    </div>
+  </div>
+</template>
 </html>
