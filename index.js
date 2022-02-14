@@ -1,4 +1,4 @@
-const apiKey = '3fd2be6f0c70a2a598f084ddfb75487c';
+const apiKey = '45621197b42d7da0b4ae61f568a608cd';
 const language = 'ru-RU';
 const postersWidth = 'w500';
 
